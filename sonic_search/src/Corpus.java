@@ -1,3 +1,4 @@
+/* This file is a caller provided by the instructor but modified. */
 package netsfinal;
 
 import java.util.ArrayList;
@@ -6,31 +7,31 @@ import java.util.Set;
 import java.util.TreeSet;
 
 /**
- * This class represents a corpus of documents.
- * It will create an inverted index for these documents.
+ * This class represents a corpus of docs.
+ * It will create an inverted index for these docs.
  * @author swapneel
  *
  */
 public class Corpus {
 	
 	/**
-	 * An arraylist of all documents in the corpus.
+	 * An arraylist of all docs in the corpus.
 	 */
-	private ArrayList<Document> documents;
+	private ArrayList<Document> docs;
 	
 	/**
 	 * The inverted index. 
-	 * It will map a term to a set of documents that contain that term.
+	 * It will map a term to a set of docs that contain that term.
 	 */
 	private HashMap<String, Set<Document>> invertedIndex;
 	
 	/**
-	 * The constructor - it takes in an arraylist of documents.
-	 * It will generate the inverted index based on the documents.
-	 * @param documents the list of documents
+	 * The constructor - it takes in an arraylist of docs.
+	 * It will generate the inverted index based on the docs.
+	 * @param docs the list of docs
 	 */
-	public Corpus(ArrayList<Document> documents) {
-		this.documents = documents;
+	public Corpus(ArrayList<Document> docs) {
+		this.docs = docs;
 		invertedIndex = new HashMap<String, Set<Document>>();
 		
 		createInvertedIndex();
@@ -42,7 +43,7 @@ public class Corpus {
 	private void createInvertedIndex() {
 		System.out.println("Creating the inverted index");
 		
-		for (Document document : documents) {
+		for (Document document : docs) {
 			Set<String> terms = document.getTermList();
 			
 			for (String term : terms) {
@@ -65,7 +66,7 @@ public class Corpus {
 	 */
 	public double getInverseDocumentFrequency(String term) {
 		if (invertedIndex.containsKey(term)) {
-			double size = documents.size();
+			double size = docs.size();
 			Set<Document> list = invertedIndex.get(term);
 			double documentFrequency = list.size();
 			
@@ -76,10 +77,10 @@ public class Corpus {
 	}
 
 	/**
-	 * @return the documents
+	 * @return the docs
 	 */
-	public ArrayList<Document> getDocuments() {
-		return documents;
+	public ArrayList<Document> getdocs() {
+		return docs;
 	}
 
 	/**
