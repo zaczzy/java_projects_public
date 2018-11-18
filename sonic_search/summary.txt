@@ -1,0 +1,27 @@
+Summary of NETS 150 Spring 2017 final project 
+Author: Zachary Zhao
+Team: Michael Zhou(muzh@seas), Zachary Zhao(zhaozeyu@seas)
+Name: Sonic Search
+Description: 
+This is a lyric analyzer that makes two kind of recommendations: similarity recommendation and lyric search. Similarity recommendation means
+given a specific selected lyric of a song, we recommend the top 10 songs with the most similar lyrics. The similarity is calculated using 
+Prof. Swapneel Sheth's tf-idf/cosine similarity measurement. On the other hand, lyric search uses apache's Lucene document search engine, it 
+enables the user to search all the datasets of songs to look for songs whose lyrics contains the query, or whose title contains the query, or
+who author name contains the query.
+
+Topics covered:
+`Document Search in Information Retrieval
+`Recommendation using Lucene Search Engine
+
+Work BreakDown:
+`Zack: Use the preprocessed data to write API for feeding data to vector space model and producing similarity results; providing
+API using Lucene to search songs by lyric, title or author.
+`Michael: Preprocess the data by loading the csv files and storing them, use the APIs and make a coherent application. Michael experimented with 
+building a JavaFX application and displaying a heatmap version of the similarity matrix using jHeatChart however, the process turns out to be 
+more difficult than necessary, so our application runs on console. JHeatChart did not manage to present a nice visualization due to the nature of
+the small corpus size for each artist's collection.
+
+Comments: 
+One bottleneck for document similarity search is that a global tf-idf inverted-index cannot be created with a size 55000 corpus using the code 
+provided to us, since the application runs out of space. This forces us to subdivide the corpus and create multiple vector space models to find 
+a similarity weight balanced by the other songs of the same artist.

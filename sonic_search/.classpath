@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path=""/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/Zachary Zhao/java workspace/nets_final/jars/jheatchart-0.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Zachary Zhao/java workspace/nets_final/jars/jsoup-1.10.2.jar"/>
+	<classpathentry kind="lib" path="jars/commons-csv-1.4-sources.jar"/>
+	<classpathentry kind="lib" path="jars/commons-csv-1.4.jar"/>
+	<classpathentry kind="lib" path="D:/eclipse/plugins/lucene-6.5.1/core/lucene-core-6.5.1.jar"/>
+	<classpathentry kind="lib" path="D:/eclipse/plugins/lucene-6.5.1/queryparser/lucene-queryparser-6.5.1.jar"/>
+	<classpathentry kind="lib" path="D:/eclipse/plugins/lucene-6.5.1/analysis/common/lucene-analyzers-common-6.5.1.jar"/>
+	<classpathentry kind="output" path=""/>
+</classpath>
