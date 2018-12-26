@@ -80,4 +80,23 @@ PennKey: zhaozeyu
   pause the recursion, it is worth it because other ways are just TOO complicated.
   
 
+Thoughts:
+But today, I come up with the idea of making a Music Master game, where players use A S D F H J K L keys to hit the bars that fall down the screen, when they collide with target line. All of this will be accompanied by cool music in the background. I attached a pic as a template, but it won't be exactly identical.
+So the music part is easy, importing javax.sound.sampled.* should suffice .wav sound.
+Here are the rudimentary thoughts on how to meet as many requirements as possible:
+
+        1.  I/O: I need 8 lanes of bars falling at pre-determined time and speed, therefore each game level should have two files that each log down the time and speed of bars.
+        2.  Collections: I think I can have a Tree Map from Strings to Integers: "Excellent" -> 9 times; "Good" -> 5 times "Missed" -> 2 times.
+        
+Also another essential  usage of Linked List is, I need 8 linked list of Falling Bars, as they are generated on screen they are enqued, and as they fall out of screen they are dequed.
+
+        3. JUnit testing to test the time and speed of  the falling objects and Dynamic Dispatch for different types of objects.
+        4. adding pther falling objects: falling rectangle, falling bombs etc, and apply different rules on them.
+        
+Falling Rectangles: need to detect starting key press, assume the player keeps pressing, detect the time when press released to calculate the accumulative score.
+
+Falling Bars: the score is calculated by finding the distance between the target line and the lowest falling object at the time of the key press.
+
+Falling Bombs: the reverse of Falling bars, if too close within rangle when key pressed, deduct points.
+
 
